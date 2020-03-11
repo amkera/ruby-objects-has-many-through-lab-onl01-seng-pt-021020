@@ -1,4 +1,3 @@
-require 'pry'
 
 class Patient
   attr_reader :name
