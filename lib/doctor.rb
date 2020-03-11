@@ -20,7 +20,7 @@ class Doctor
   end
   
   def patients
-    appointments.map {|appointment| appointment.patient}
+    self.appointments.map {|appointment| appointment.patient}
     #returns an array of all the patients from appointments connected to a specific doctor
   end
   
