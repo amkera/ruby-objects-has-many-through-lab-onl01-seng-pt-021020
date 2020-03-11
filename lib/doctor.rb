@@ -16,11 +16,12 @@ class Doctor
   
   def appointments
     Appointment.all.select {|appt| appt.doctor == self} #relationship is now circular with this line of code. 
+    #returns an array of appointments for a particular doctor 
   end
   
   def patients
     appointments.map {|appointment| appointment.patient}
-    #we need to go through the appointment class. 
+    #returns an array of all the patients from appointments connected to a specific doctor
   end
   
   def new_appointment(patient, date)
