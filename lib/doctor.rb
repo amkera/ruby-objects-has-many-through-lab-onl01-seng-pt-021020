@@ -27,4 +27,3 @@ class Doctor
   end
   
 end 
-
