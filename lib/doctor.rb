@@ -18,13 +18,13 @@ class Doctor
   end
   
   def patients
-    self.appointments.map {|appointment| appointment.patient}
-    
     #returns an array of all the patients from appointments connected to a specific doctor
+    self.appointments.map {|appointment| appointment.patient}
   end
   
   def new_appointment(patient, date)
     Appointment.new(patient, date, self)
   end
+  
 end 
 
