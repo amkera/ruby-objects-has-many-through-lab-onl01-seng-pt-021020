@@ -13,9 +13,8 @@ class Doctor
     @@all
   end
   
-  
   def appointments
-    Appointment.all.select {|appt| appt.doctor == self} #relationship is now circular with this line of code. 
+    Appointment.all.find_all {|appt| appt.doctor == self} #relationship is now circular with this line of code. 
     #returns an array of appointments for a particular doctor 
   end
   
