@@ -15,11 +15,12 @@ class Doctor
   
   
   def appointments
-    Appointment.all.select {|appt| appt.doctor == self}
+    Appointment.all.select {|appt| appt.doctor == self} #relationship is now circular with this line of code. 
   end
   
   def patients
     appointments.map {|appointment| appointment.patient}
+    #we need to go through the appointment class. 
   end
   
   def new_appointment(patient, date)
